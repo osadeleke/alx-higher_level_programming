@@ -1,19 +1,19 @@
 # Python Intro Projects
-- [0. Run Python file](./0-run)
+- **[0. Run Python file](./0-run)**
 Write a Shell script that runs a Python script.
 The Python file name will be saved in the environment variable $PYFILE
 
-- [1. Run inline](./1-run_inline)
+- **[1. Run inline](./1-run_inline)**
 Write a Shell script that runs Python code.
 The Python code will be saved in the environment variable $PYCODE
 
-### [2. Hello, print](./2-print.py)
+- **[2. Hello, print](./2-print.py)**
 Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line. Use the function print
 
-### [3. Print Integer](./3-print_number.py)
+- **[3. Print Integer](./3-print_number.py)**
 Print the integer stored in the variable number, followed by Battery street, followed by a new line.
 
-### [4. Print float](./4-print_float.py)
+- **[4. Print float](./4-print_float.py)**
 Print the float stored in the variable number with a precision of 2 digits.
 
 ### [5. Print string](./5-print_string.py)
