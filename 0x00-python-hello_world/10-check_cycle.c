@@ -22,6 +22,5 @@ int check_cycle(listint_t *t)
 
 		current = current->next;
 	}
-
 	return (1);
 }
