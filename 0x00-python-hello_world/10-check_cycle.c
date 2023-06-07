@@ -15,16 +15,15 @@ int check_cycle(listint_t *t)
 		return (0);
 
 	current = t;
-	fast = t->next;
-	if (fast == NULL)
-		return (0);
+	fast = t;
 
-	while (current != fast)
+	while (current != NULL && fast != NULL && fast->next != NULL)
 	{
-		if (current == NULL || fast == NULL)
-			return (0);
 		current = current->next;
 		fast = fast->next->next;
+
+		if (current == fast)
+			return (1);
 	}
-	return (1);
+	return (0);
 }
