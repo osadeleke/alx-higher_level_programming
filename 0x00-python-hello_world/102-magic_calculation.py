@@ -2,5 +2,10 @@
 import dis
 
 
-def magic_calculation(a, b):
-    return (98 + a ** b)
+def magic_calculation(a, b, c):
+    if a < b:
+        return c
+    elif c > b:
+        return a + b
+    else:
+        return a * b - c
