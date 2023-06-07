@@ -14,8 +14,8 @@ int check_cycle(listint_t *t)
 	if (t == NULL || t->next == NULL)
 		return (0);
 
-	current = t->next;
-	fast = t->next->next;
+	current = t;
+	fast = t->next;
 	if (fast == NULL)
 		return (0);
 
