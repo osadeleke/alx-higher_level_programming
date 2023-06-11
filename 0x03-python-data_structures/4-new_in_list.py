@@ -13,4 +13,3 @@ def new_in_list(my_list, idx, element):
             else:
                 n_list = n_list + [my_list[i]]
         return n_list
-
