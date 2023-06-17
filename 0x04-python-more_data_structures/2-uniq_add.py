@@ -8,4 +8,3 @@ def uniq_add(my_list=[]):
             except ValueError:
                 i = i + int(element)
         return i
-
