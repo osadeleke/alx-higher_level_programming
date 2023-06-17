@@ -4,7 +4,7 @@ def search_replace(my_list, search, replace):
         new_list = []
         for element in my_list:
             new_list.append(element)
-        i = 0
+        i = -1
         while True:
             try:
                 i = my_list.index(search, i + 1)
