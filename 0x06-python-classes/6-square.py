@@ -8,7 +8,7 @@ class Square:
         """Method to initialize size"""
         self.__size = size
         if len(position) != 2:
-            raise TypeError("\n\nThis is wrong\n\n")
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
 
@@ -37,10 +37,7 @@ class Square:
     @position.setter
     def position(self, value):
         """Setter for position"""
-        if len(value) != 2:
-            raise TypeError
-        else:
-           self.__position = value
+        self.__position = value
 
     def area(self):
         """Method to return area of square"""
