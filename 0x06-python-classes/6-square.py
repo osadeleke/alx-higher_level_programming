@@ -7,7 +7,7 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """Method to initialize size"""
         self.__size = size
-        if len(position) != 2:
+        if len(position) != 2 or position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
