@@ -1,0 +1,29 @@
+Import the method
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Start running tests
+# Test with valid integers
+>>> add_integer(1,2)
+3
+
+# Test negative integer value
+>>> add_integer(100, -2)
+98
+
+#Test with no second value
+>>> add_integer(2)
+100
+
+#Test with a float
+>>> add_integer(100.3, -2)
+98
+
+#Test with string
+>>> add_integer(4, "School")
+b must be an integer
+
+#Test with None output
+>>> add_integer(None)
+a must be an integer
+
+#end

@@ -1,0 +1,32 @@
+Import the method
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test Cases
+>>> matrix = [
+...	[1, 2, 3],
+...	[4, 5, 6]
+... ]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+With one value as string
+>>> matrix = [
+...     [1, 'b', 3],
+...     [4, 5, 6]
+... ]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 9, in matrix_divided
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+With div being not a number or float
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> matrix_divided(matrix, 'b')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in matrix_divided
+TypeError: div must be a number 
