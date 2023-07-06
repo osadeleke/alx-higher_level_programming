@@ -28,3 +28,13 @@ With div being not a number or float
 Traceback (most recent call last):
 	...
 TypeError: div must be a number
+
+Test matrix list not the same size
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5]
+... ]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+	...
+TypeError: Each row of the matrix must have the same size
