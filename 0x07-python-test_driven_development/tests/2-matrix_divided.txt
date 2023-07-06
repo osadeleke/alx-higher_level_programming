@@ -9,6 +9,18 @@ Test Cases
 >>> matrix_divided(matrix, 3)
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
+Test missing one argument
+>>> matrix_divided(matrix)
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Test missing two arguments
+>>> matrix_divided()
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
 With one value as string
 >>> matrix = [
 ...     [1, 'b', 3],
