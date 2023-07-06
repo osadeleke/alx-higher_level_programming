@@ -20,10 +20,14 @@ Start running tests
 
 #Test with string
 >>> add_integer(4, "School")
-b must be an integer
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
 
 #Test with None output
 >>> add_integer(None)
-a must be an integer
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
 
 #end
