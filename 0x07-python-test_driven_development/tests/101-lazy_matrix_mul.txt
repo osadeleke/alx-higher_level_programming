@@ -32,3 +32,8 @@ ValueError: data type must provide an itemsize
 >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]]))
 [[19 22]
  [43 50]]
+
+# List of different size
+>>> print(lazy_matrix_mul([[1, 2], [3]], [[5, 6], [7, 8]]))
+[list([1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 3, 3, 3, 3, 3, 3, 3])
+ list([1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3])]
