@@ -6,7 +6,7 @@ Text Indentation Module
 
 def text_indentation(text):
     """
-    Text Indentation Method
+    Text Indentation Method.
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
@@ -23,5 +23,6 @@ def text_indentation(text):
                         i += 2
                     if s != ' ':
                         i += 1
-        print(text[i], end='')
-        i += 1
+        else:
+            print(text[i], end='')
+            i += 1
