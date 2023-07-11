@@ -7,8 +7,7 @@ class MyList(list):
     """child class of list
     """
     def __init__(self):
-        list.__init__(self)
-        self.list = list()
-
+        self.list = list.__init__(self)
+    
     def print_sorted(self):
         print(self.list)
