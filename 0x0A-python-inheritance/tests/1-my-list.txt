@@ -1,0 +1,47 @@
+# Load the class
+>>> MyList = __import__("1-my_list").MyList
+
+# Test a list with random numbers
+>>> my_list = MyList()
+>>> my_list.append(4)
+>>> my_list.append(5)
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> print(my_list)
+[4, 5, 3, 1, 2]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[4, 5, 3, 1, 2]
+
+# Test negatives empty list
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-5)
+>>> print(my_list)
+[-1, -5]
+>>> my_list.print_sorted()
+[-5, -1]
+>>> print(my_list)
+[-1, -5]
+
+# Test an empty list
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
+[]
+
+# Test for duplicate items in list
+>>> my_list = MyList()
+>>> my_list.append(5)
+>>> my_list.append(5)
+>>> print(my_list)
+[5, 5]
+>>> my_list.print_sorted()
+[5, 5]
+>>> print(my_list)
+[5, 5]
