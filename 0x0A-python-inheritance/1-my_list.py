@@ -6,8 +6,14 @@
 class MyList(list):
     """child class of list
     """
-    def __init__(self):
-        self.list = list.__init__(self)
-    
     def print_sorted(self):
-        print(self.list)
+        """
+        Module to sort a list
+        """
+        print(sorted(self.copy()))
+        """
+        => This is an advanced solution lol
+        new_list = list.copy(self)
+        list.sort(new_list)
+        print(new_list)
+        """
