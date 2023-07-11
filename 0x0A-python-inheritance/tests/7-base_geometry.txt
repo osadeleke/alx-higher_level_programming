@@ -65,3 +65,8 @@ Traceback (most recent call last):
 	...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
+# Test area method
+>>> bg.area()
+Traceback (most recent call last):
+	...
+Exception: area() is not implemented
