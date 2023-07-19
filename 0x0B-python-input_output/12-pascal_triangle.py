@@ -9,7 +9,7 @@ def pascal_triangle(n):
     List of list of integers rep pascal's triangle
     """
     if n <= 0:
-        main_list = [[]]
+        main_list = []
     elif n == 1:
         main_list = [[1]]
     elif n == 2:
