@@ -36,7 +36,7 @@ print("{} {} {}".format(new_student_1.first_name, new_student_1.last_name, new_s
 print("Load dictionary from file:")
 new_j_student_1 = load_from_json_file(path)
 
-new_student_1.reload_from_json(j_student_1)
+new_student_1.reload_from_json({})
 print(new_student_1)
 print(type(new_student_1))
 print("{} {} {}".format(new_student_1.first_name, new_student_1.last_name, new_student_1.age))
