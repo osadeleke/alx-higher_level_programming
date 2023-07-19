@@ -2,7 +2,6 @@
 """
 Defines a student
 """
-import json
 
 
 class Student:
