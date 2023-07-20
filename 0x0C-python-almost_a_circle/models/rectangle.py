@@ -156,6 +156,12 @@ class Rectangle(Base):
             if "y" in kwargs:
                 self.__y = kwargs["y"]
 
+    def to_dictionary(self):
+        """
+        Returns dictionary representation of a Rectangle
+        """
+        return vars(self)
+
     def __str__(self):
         paone = "[Rectangle] ({}) {}".format(self.id, self.__x)
         patwo = "/{} - {}/{}".format(self.__y, self.__width, self.__height)
