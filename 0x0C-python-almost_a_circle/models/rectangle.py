@@ -30,11 +30,13 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
+    @property
     def width(self):
         """Public Width Getter
         """
         return self.__width
-
+    
+    @width.setter
     def width(self, width):
         """Public Width setter
         """
