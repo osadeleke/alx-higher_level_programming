@@ -35,38 +35,44 @@ class Rectangle(Base):
         """Public Width Getter
         """
         return self.__width
-    
+
     @width.setter
     def width(self, width):
         """Public Width setter
         """
         self.__width = width
 
+    @property
     def height(self):
         """Public Height Getter
         """
         return self.__height
 
+    @height.setter
     def height(self, height):
         """Public Width setter
         """
         self.__height = height
 
+    @property
     def x(self):
         """Public x Getter
         """
         return self.__x
 
+    @x.setter
     def x(self, x):
         """Public Width setter
         """
         self.__x = x
 
+    @property
     def y(self):
         """Public y Getter
         """
         return self.__y
 
+    @y.setter
     def y(self, y):
         """Public Width setter
         """
