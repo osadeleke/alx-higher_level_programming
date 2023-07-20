@@ -30,42 +30,42 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
-    def return_width(self):
+    def width(self):
         """Public Width Getter
         """
         return self.__width
 
-    def set_width(self, width):
+    def width(self, width):
         """Public Width setter
         """
         self.__width = width
 
-    def return_height(self):
+    def height(self):
         """Public Height Getter
         """
         return self.__height
 
-    def set_height(self, height):
+    def height(self, height):
         """Public Width setter
         """
         self.__height = height
 
-    def return_x(self):
+    def x(self):
         """Public x Getter
         """
         return self.__x
 
-    def set_x(self, x):
+    def x(self, x):
         """Public Width setter
         """
         self.__x = x
 
-    def return_y(self):
+    def y(self):
         """Public y Getter
         """
         return self.__y
 
-    def set_y(self, y):
+    def y(self, y):
         """Public Width setter
         """
         self.__y = y
