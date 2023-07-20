@@ -116,18 +116,18 @@ class Rectangle(Base):
         """
         return self.__width * self.__height
 
-    """def display(self):
+    def display(self):
         """
-        """Prints rectangle instance to stdout"""
+        Prints rectangle instance to stdout
         """
-        for l in range(self.__y):
+        for space_y in range(self.__y):
             print()
         for i in range(self.__height):
-            for k in range(self.__x):
+            for space_x in range(self.__x):
                 print(" ", end='')
             for j in range(self.__width):
                 print("#", end='')
-            print()"""
+            print()
 
     def update(self, *args):
         """
