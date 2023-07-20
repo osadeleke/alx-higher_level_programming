@@ -129,6 +129,22 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
+    def update(self, *args):
+        """
+        assigns an argument to each attribute
+        """
+        for i, arg in enumerate(args):
+            if i == 0:
+                self.id = args[0]
+            elif i == 1:
+                self.__width = args[1]
+            elif i == 2:
+                self.__height = args[2]
+            elif i == 3:
+                self.__x = args[3]
+            elif i == 4:
+                self.__y = args[4]
+
     def __str__(self):
         paone = "[Rectangle] ({}) {}".format(self.id, self.__x)
         patwo = "/{} - {}/{}".format(self.__y, self.__width, self.__height)
