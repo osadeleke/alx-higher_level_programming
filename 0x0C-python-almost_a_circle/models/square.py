@@ -167,9 +167,29 @@ class Square(Rectangle):
     Class Square
     """
     def __init__(self, size, x=0, y=0, id=None):
-        width = size
-        height = size
+        self.__size = size
+        width = self.__size
+        height = self.__size
         super().__init__(width, height, x, y, id)
+
+    @property
+    def size(self):
+        """
+        Getter for Size
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, size):
+        """
+        Setter for size
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size <= 0:
+            raise ValueError("size must be > 0")
+        width = self.__size
+        height = self.__size
 
     def __str__(self):
         paone = "[Square] ({}) {}/".format(self.id, self.x)
