@@ -116,9 +116,9 @@ class Rectangle(Base):
         """
         return self.__width * self.__height
 
-    def display(self):
+    """def display(self):
         """
-        Prints rectangle instance to stdout
+        """Prints rectangle instance to stdout"""
         """
         for l in range(self.__y):
             print()
@@ -127,7 +127,7 @@ class Rectangle(Base):
                 print(" ", end='')
             for j in range(self.__width):
                 print("#", end='')
-            print()
+            print()"""
 
     def update(self, *args):
         """
