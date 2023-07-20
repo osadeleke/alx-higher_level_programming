@@ -184,12 +184,8 @@ class Square(Rectangle):
         """
         Setter for size
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size <= 0:
-            raise ValueError("size must be > 0")
-        width = self.__size
-        height = self.__size
+        self.width = size
+        self.height = size
 
     def __str__(self):
         paone = "[Square] ({}) {}/".format(self.id, self.x)
