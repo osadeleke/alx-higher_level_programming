@@ -129,7 +129,7 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         assigns an argument to each attribute
         """
@@ -144,6 +144,18 @@ class Rectangle(Base):
                 self.__x = args[3]
             elif i == 4:
                 self.__y = args[4]
+        if args is None:
+            for key, value in kwargs.items():
+                if key == 'width':
+                    self.__width = value
+                elif key == 'height':
+                    self.__height = value
+                elif key == 'id':
+                    self.id = value
+                elif key == 'x':
+                    self.__x = value
+                elif key == 'y':
+                    self.__y = value
 
     def __str__(self):
         paone = "[Rectangle] ({}) {}".format(self.id, self.__x)
