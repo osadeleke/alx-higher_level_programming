@@ -54,6 +54,9 @@ class Square(Rectangle):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
+        """
+        Return: a dictionary returning value
+        """
         new_dict = {}
         new_dict["id"] = self.id
         new_dict["size"] = self.width
