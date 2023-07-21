@@ -147,14 +147,13 @@ class Rectangle(Base):
         """
         Returns dictionary representation of a Rectangle
         """
-        new_dict = vars(self)
-        ret_dict = {}
-        class_name = "_{}__".format(type(self).__name__)
-        for key, value in new_dict.items():
-            if key.startswith(class_name):
-                key.replace(class_name, "")
-            ret_dict[key] = value
-        return ret_dict
+        fin_dict = {}
+        fin_dict["width"] = self.width
+        fin_dict["height"] = self.height
+        fin_dict["id"] = self.id
+        fin_dict["x"] = self.x
+        fin_dict["y"] = self.y
+        return fin_dict
 
     def __str__(self):
         paone = "[Rectangle] ({}) {}".format(self.id, self.__x)
