@@ -2,7 +2,7 @@
 """
 Module for Shapes
 """
-from .rectange import Rectangle
+from .rectangle import Rectangle
 
 
 class Square(Rectangle):
