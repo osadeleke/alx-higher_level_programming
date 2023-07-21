@@ -38,22 +38,28 @@ class Square(Rectangle):
             if i == 0:
                 self.id = arg
             if i == 1:
-                self.__size = arg
-                self.width = self.__size
+                self.width = arg
             if i == 2:
                 self.x = arg
             if i == 3:
                 self.y = arg
         if kwargs:
             if "size" in kwargs:
-                self.__size = kwargs["size"]
-                self.width = self.__size
+                self.width = kwargs["size"]
             if "id" in kwargs:
                 self.id = kwargs["id"]
             if "x" in kwargs:
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        new_dict = {}
+        new_dict["id"] = self.id
+        new_dict["size"] = self.width
+        new_dict["x"] = self.x
+        new_dict["y"] = self.y
+        return new_dict
 
     def __str__(self):
         """
