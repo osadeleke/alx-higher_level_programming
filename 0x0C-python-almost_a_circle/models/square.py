@@ -62,20 +62,6 @@ class Square(Rectangle):
             if "y" in kwargs:
                 self.y = kwargs["y"]
 
-    def to_dictionary(self):
-        """
-        Return: dictionary repreentation of a Square
-        """
-        """
-        dict_main = vars(self)
-        new_dict = {}
-        for key, value in dict_main.items():
-            if not (key.startswith('_')):
-                new_dict[key] = value
-        return new_dict
-        """
-        return vars(self)
-
     def __str__(self):
         """
         String representation for Object
