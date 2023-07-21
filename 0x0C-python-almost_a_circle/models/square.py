@@ -10,6 +10,9 @@ class Square(Rectangle):
     Class Square
     """
     def __init__(self, size, x=0, y=0, id=None):
+        """
+        Class constructor
+        """
         self.__size = size
         width = self.__size
         height = self.__size
@@ -74,6 +77,9 @@ class Square(Rectangle):
         return vars(self)
 
     def __str__(self):
+        """
+        String representation for Object
+        """
         paone = "[Square] ({}) {}/".format(self.id, self.x)
         patwo = "{} - {}".format(self.y, self.width)
         return paone + patwo
