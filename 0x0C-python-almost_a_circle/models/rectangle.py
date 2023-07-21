@@ -2,20 +2,7 @@
 """
 Module for Shapes
 """
-
-
-class Base:
-    """
-    Base for other classes in the project
-    """
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+from .base import Base
 
 
 class Rectangle(Base):
@@ -160,7 +147,14 @@ class Rectangle(Base):
         """
         Returns dictionary representation of a Rectangle
         """
-        return vars(self)
+        new_dict = vars(self)
+        ret_dict = {}
+        class_name = "_{}__".format(type(self).__name__)
+        for key, value in new_dict.items():
+            if key.startswith(class_name):
+                key.replace(class_name, "")
+            ret_dict[key] = value
+        return ret_dict
 
     def __str__(self):
         paone = "[Rectangle] ({}) {}".format(self.id, self.__x)
