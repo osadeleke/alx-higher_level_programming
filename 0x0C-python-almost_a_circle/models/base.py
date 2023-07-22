@@ -42,7 +42,7 @@ class Base:
             return
         for val in list_objs:
             ins_dict = {}
-            for key, value in vars(val).items():
+            for key, value in val.__dict__.items():
                 if key.startswith("_{}_".format(cls.__name__)):
                     key = key[len(cls.__name__) + 3:]
                 ins_dict[key] = value
