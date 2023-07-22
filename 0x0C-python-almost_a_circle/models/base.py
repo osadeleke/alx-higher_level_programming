@@ -62,3 +62,12 @@ class Base:
         json_string = cls.to_json_string(old_list)
         with open(name, 'w') as f:
             f.write(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Return an instance of all attributes already set in dict
+        """
+        dum_inst = cls(1, 1, 1, 1, 1)
+        dum_inst.update(**dictionary)
+        return dum_inst
