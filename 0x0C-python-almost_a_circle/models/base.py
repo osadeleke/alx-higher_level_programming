@@ -35,6 +35,11 @@ class Base:
         """
         name = cls.__name__ + ".json"
         old_list = []
+        if list_objs is None:
+            with open(name, 'w') as f:
+                empty_list = json.dumps(old_list)
+                f.write(empty_list)
+            return
         for val in list_objs:
             ins_dict = {}
             for key, value in vars(val).items():
