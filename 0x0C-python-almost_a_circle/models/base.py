@@ -68,7 +68,7 @@ class Base:
         """
         Return an instance of all attributes already set in dict
         """
-        dum_inst = cls(1, 1, 1, 1, 1)
+        dum_inst = cls(1, 1, 0, 0, 0)
         dum_inst.update(**dictionary)
         return dum_inst
 
