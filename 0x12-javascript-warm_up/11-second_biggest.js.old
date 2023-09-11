@@ -1,0 +1,27 @@
+#!/usr/bin/node
+
+let largestValue;
+let secondLargest;
+let i = 3;
+
+if (process.argv.length < 4) {
+  console.log(0);
+} else {
+  largestValue = parseInt(process.argv[2]);
+  while (process.argv[i] !== undefined) {
+    if (largestValue < parseInt(process.argv[i])) {
+      largestValue = parseInt(process.argv[i]);
+    }
+    i++;
+  }
+  i = 0;
+  secondLargest = parseInt(process.argv[2]);
+  while (process.argv[i] !== undefined) {
+    if (parseInt(process.argv[i]) > secondLargest && parseInt(process.argv[i]) !== largestValue) {
+      secondLargest = parseInt(process.argv[i]);
+    }
+    i++;
+  }
+
+  console.log(secondLargest);
+}

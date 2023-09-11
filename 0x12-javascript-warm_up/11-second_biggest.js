@@ -1,27 +1,27 @@
 #!/usr/bin/node
 
-let largestValue;
-let secondLargest;
 let i = 3;
+let j;
+let listNumbers;
+let finalList;
 
 if (process.argv.length < 4) {
   console.log(0);
 } else {
-  largestValue = process.argv[2];
+  listNumbers = [];
   while (process.argv[i] !== undefined) {
-    if (largestValue < process.argv[i]) {
-      largestValue = process.argv[i];
-    }
+    listNumbers.push(parseInt(process.argv[i]));
     i++;
   }
-  i = 0;
-  secondLargest = process.argv[2];
-  while (process.argv[i] !== undefined) {
-    if (process.argv[i] > secondLargest && process.argv[i] !== largestValue) {
-      secondLargest = process.argv[i];
+  listNumbers.sort((a, b) => b - a);
+  finalList = [listNumbers[0]];
+  j = 1;
+  while (listNumbers[j]) {
+    if (listNumbers[j - 1] !== listNumbers[j]) {
+      finalList.push(parseInt(listNumbers[j]));
     }
-    i++;
+    j++;
   }
-
-  console.log(secondLargest);
+  console.log(finalList);
+  console.log(finalList[1]);
 }
