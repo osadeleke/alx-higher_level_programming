@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let i = 3;
+let i = 2;
 let j;
 let listNumbers;
 let finalList;
@@ -10,10 +10,14 @@ if (process.argv.length < 4) {
 } else {
   listNumbers = [];
   while (process.argv[i] !== undefined) {
+    console.log(process.argv[i]);
     listNumbers.push(parseInt(process.argv[i]));
     i++;
   }
+  
+  console.log(listNumbers);
   listNumbers.sort((a, b) => b - a);
+  
   finalList = [listNumbers[0]];
   j = 1;
   while (listNumbers[j]) {
@@ -24,4 +28,5 @@ if (process.argv.length < 4) {
   }
   console.log(finalList);
   console.log(finalList[1]);
+ 
 }
