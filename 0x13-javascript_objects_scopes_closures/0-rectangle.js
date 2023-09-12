@@ -5,3 +5,5 @@ class Rectangle {
     // this is an empty constructor
   }
 }
+
+module.exports = Rectangle;
