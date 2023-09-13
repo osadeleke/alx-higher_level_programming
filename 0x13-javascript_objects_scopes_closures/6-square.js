@@ -14,13 +14,13 @@ class Square extends square {
     } else {
       let i = 0;
       let j = 0;
-      let widthPrint = '';
+      /*let widthPrint = '';
       while (i < this.size) {
         widthPrint = widthPrint + c;
         i++;
-      }
+      }*/
       while (j < this.size) {
-        console.log(widthPrint);
+        console.log(c.repeat(this.size));
         j++;
       }
     }
