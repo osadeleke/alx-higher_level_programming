@@ -2,9 +2,9 @@
 
 const file = require('fs');
 
-const filePathA = 'fileA';
-const filePathB = 'fileB';
-const filePathC = 'fileC';
+const filePathA = process.argv[2];
+const filePathB = process.argv[3];
+const filePathC = process.argv[4];
 
 file.readFile(filePathA, 'utf8', (err, dataA) => {
   if (err) {
