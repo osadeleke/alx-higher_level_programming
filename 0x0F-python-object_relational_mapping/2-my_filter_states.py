@@ -25,9 +25,9 @@ def main():
     )
     cur = db.cursor()
     firstQuery = "SELECT id, name FROM states WHERE name "
-    secondQuery = "= %s ORDER BY id ASC"
+    secondQuery = "= '{}' ORDER BY id ASC".format(MY_ARG)
     finalQuery = firstQuery + secondQuery
-    cur.execute(finalQuery, (MY_ARG,))
+    cur.execute(finalQuery)
     rows = cur.fetchall()
     for row in rows:
         print(row)
