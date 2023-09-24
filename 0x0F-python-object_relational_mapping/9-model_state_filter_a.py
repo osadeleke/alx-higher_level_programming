@@ -24,8 +24,6 @@ def main():
     if statesFiltered:
         for state in statesFiltered:
             print('{}: {}'.format(state.id, state.name))
-    else:
-        print('Nothing')
 
     session.close()
 
