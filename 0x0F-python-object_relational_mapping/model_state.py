@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Class definition for State and instance Base
 """
 import sqlalchemy
