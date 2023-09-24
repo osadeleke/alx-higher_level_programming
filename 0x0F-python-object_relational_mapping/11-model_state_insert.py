@@ -25,7 +25,8 @@ def main():
     session.add(newState)
     session.commit()
 
-    statesFiltered = session.query(State).filter(State.name.like('Louisiana')).all()
+    statesFiltered = session.query(State).filter(
+            State.name.like('Louisiana')).all()
     if statesFiltered:
         for state in statesFiltered:
             print(state.id)
