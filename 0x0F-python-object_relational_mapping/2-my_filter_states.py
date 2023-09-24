@@ -25,7 +25,7 @@ def main():
     )
     cur = db.cursor()
     firstQuery = "SELECT id, name FROM states WHERE name "
-    secondQuery = "= '{}' ORDER BY id ASC".format(MY_ARG)
+    secondQuery = "LIKE BINARY '{}' ORDER BY id ASC".format(MY_ARG)
     finalQuery = firstQuery + secondQuery
     cur.execute(finalQuery)
     rows = cur.fetchall()
