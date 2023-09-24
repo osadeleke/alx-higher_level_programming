@@ -25,7 +25,7 @@ def main():
     cur = db.cursor()
     firstQuery = "SELECT id, name FROM states WHERE name "
     secondQuery = "COLLATE utf8_bin LIKE 'N%' ORDER BY id ASC"
-    finalQuery = firstQuery + secondQuery
+    finalQuery = f"{firstQuery} {secondQuery}"
     cur.execute(finalQuery)
     rows = cur.fetchall()
     for row in rows:
