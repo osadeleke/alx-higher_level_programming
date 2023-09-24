@@ -23,7 +23,7 @@ def main():
             db=MY_DB
     )
     cur = db.cursor()
-    firstQuery = "SELECT id, name FROM states WHERE name "
+    firstQuery = "SELECT id, name FROM states WHERE name"
     secondQuery = "COLLATE utf8_bin LIKE 'N%' ORDER BY id ASC"
     finalQuery = f"{firstQuery} {secondQuery}"
     cur.execute(finalQuery)
