@@ -3,7 +3,7 @@
 """
 import sys
 import urllib.request
-# import urllib.error
+import urllib.error
 
 
 def main():
@@ -16,7 +16,7 @@ def main():
             this_page = response.read().decode('utf-8')
             print(this_page)
     except urllib.error.HTTPError as e:
-        print("Error code: {}"format(e.code))
+        print("Error code: {}".format(e.code))
 
 
 if __name__ == "__main__":
