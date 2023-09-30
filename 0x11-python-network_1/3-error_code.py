@@ -7,10 +7,7 @@ import urllib.error
 
 
 def main():
-    """Takes in a URL, sends a request to the URL and
-    displays the body of the response (decoded in utf-8).
-    Manage urllib.error.HTTPError exceptions and
-    print: Error code: followed by the HTTP status code
+    """ Takes in a url and returns error code if error
     """
     url = sys.argv[1]
     req = urllib.request.Request(url)
