@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""Takes in a URL, sends a request to the URL
-"""
 import sys
 import urllib.request
 import urllib.error
 
 
 def main():
-    """ Takes in a url and returns error code if error
-    """
     url = sys.argv[1]
     req = urllib.request.Request(url)
     try:
