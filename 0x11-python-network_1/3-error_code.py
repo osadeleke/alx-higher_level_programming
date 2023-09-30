@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+"""Python script that fetches a variable from header
+"""
 import sys
 import urllib.request
 import urllib.error
 
 
 def main():
+    """Python script that fetches a variable from header
+    """
     url = sys.argv[1]
     req = urllib.request.Request(url)
     try:
