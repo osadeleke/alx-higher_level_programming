@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Takes in a URL, sends a request to the URL and
 displays the body of the response (decoded in utf-8).
-
 Manage urllib.error.HTTPError exceptions and
 print: Error code: followed by the HTTP status code
 """
