@@ -11,8 +11,11 @@ def main():
     You must use the package requests
     """
     r = requests.get(sys.argv[1])
-    val = r.headers['X-Request-Id']
-    print(val)
+    for key in r.headers:
+        if key == 'X-Request-Id':
+            val = r.headers['X-Request-Id']
+            print(val)
+            break
 
 
 if __name__ == "__main__":
