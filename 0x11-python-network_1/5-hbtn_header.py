@@ -11,8 +11,7 @@ def main():
     You must use the package requests
     """
     r = requests.get(sys.argv[1])
-    val = r.headers['X-Request-Id']
-    print(val)
+    r.headers['X-Request-Id']
 
 
 if __name__ == "__main__":
