@@ -11,7 +11,7 @@ def main():
     You must use the package requests
     """
     r = requests.get(sys.argv[1])
-    val = r.header['X-Request-Id']
+    val = r.headers['X-Request-Id']
     print(val)
 
 
