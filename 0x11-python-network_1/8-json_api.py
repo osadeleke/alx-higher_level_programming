@@ -23,11 +23,12 @@ def main():
     if "application/json" not in r.headers.get("content_type", "").lower():
         print("Not a valid JSON")
         return
+
+    r_dumped = r.json()
     if len(r_dumped) == 0:
         print("No result")
         return
 
-    r_dumped = r.json()
     print("[{}] {}".format(r_dumped['id'], r_dumped['name']))
 
 
