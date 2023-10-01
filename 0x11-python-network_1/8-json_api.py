@@ -19,15 +19,15 @@ def main():
         data_load = {'q': sys.argv[1]}
 
     r = requests.post(url, data_load)
-    r_dumped = r.json()
 
-    if not isinstance(r_dumped, dict):
+    if "application/json" in r.headers.get("content_type", "").lower():
         print("Not a valid JSON")
         return
     if len(r_dumped) == 0:
         print("No result")
         return
 
+    r_dumped = r.json()
     print("[{}] {}".format(r_dumped['id'], r_dumped['name']))
 
 
