@@ -20,11 +20,12 @@ def main():
 
     r = requests.post(url, data_load)
 
-    if "application/json" not in r.headers.get("content_type", "").lower():
+    try:
+        r_dumped = r.json()
+    except ValueError as e:
         print("Not a valid JSON")
         return
 
-    r_dumped = r.json()
     if len(r_dumped) == 0:
         print("No result")
         return
