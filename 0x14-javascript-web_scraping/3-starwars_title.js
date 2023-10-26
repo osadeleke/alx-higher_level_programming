@@ -8,7 +8,7 @@ const idMovie = parseInt(process.argv[2]);
 
 request(url, (error, response, body) => {
   const data = JSON.parse(body);
-  for (let i = 1; i < data.results.length; i++) {
+  for (let i = 1; i < data.results.length + 1; i++) {
     if (i === idMovie) {
       console.log(data.results[i - 1].title);
     }
