@@ -3,6 +3,9 @@
 const request = require('request');
 
 const url = process.argv[2];
+let userId = 1;
+let count = 1;
+let doneTask = 0;
 const dictCompleted = {};
 
 request(url, (error, response, body) => {
@@ -10,16 +13,19 @@ request(url, (error, response, body) => {
     console.error(error);
   }
   const data = JSON.parse(body);
+  const dataLength = data.length;
   for (const element of data) {
-    if (!(element.userId in dictCompleted)) {
-      if (element.completed === true) {
-        dictCompleted[element.userId] = 1;
-      }
-    } else {
-      if (element.completed === true) {
-        dictCompleted[element.userId] = dictCompleted[element.userId] + 1;
-      }
+    if (element.completed === true) {
+      doneTask++;
     }
+    if (element.userId !== userId) {
+      if (doneTask > 0) {
+        dictCompleted[`${userId}`] = doneTask;
+      }
+      userId++;
+      doneTask = 0;
+    }
+    count++;
   }
   console.log(dictCompleted);
 });
